@@ -25,7 +25,7 @@ def create_3d_scatter_plot(points):
             yaxis_title='Y Axis',
             zaxis_title='Z Axis'
         ),
-        width=700,
+        width=300,  # Adjusted width for smartphone screens
         margin=dict(r=20, b=10, l=10, t=10)
     )
 
@@ -42,4 +42,3 @@ points = pd.DataFrame({
 st.title("3D Scatter Plot")
 
 st.plotly_chart(create_3d_scatter_plot(points))
-
