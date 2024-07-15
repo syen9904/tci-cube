@@ -21,12 +21,16 @@ def create_3d_scatter_plot(points):
 
     fig.update_layout(
         scene=dict(
-            xaxis=dict(title='X Axis', range=[0, 6]),
-            yaxis=dict(title='Y Axis', range=[0, 6]),
-            zaxis=dict(title='Z Axis', range=[0, 6])
+            xaxis=dict(title='X Axis', range=[0, 5]),
+            yaxis=dict(title='Y Axis', range=[0, 5]),
+            zaxis=dict(title='Z Axis', range=[0, 5]),
+            aspectratio=dict(x=1, y=1, z=1),
+            aspectmode='manual'
         ),
+        autosize=False,
         width=300,  # Adjusted width for smartphone screens
-        margin=dict(r=20, b=10, l=10, t=10)
+        height=200,  # Adjusted height for smartphone screens
+        margin=dict(r=10, b=10, l=10, t=10)
     )
 
     return fig
